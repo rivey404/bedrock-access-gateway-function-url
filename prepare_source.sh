@@ -42,7 +42,7 @@ if [ -d "$REPO_DIR" ]; then
     (cd $REPO_DIR && git reset --hard HEAD && git clean -fd)
 else
     echo "Cloning aws-samples/bedrock-access-gateway repository"
-    git clone --depth 1 https://github.com/aws-samples/bedrock-access-gateway $REPO_DIR
+    git clone --single-branch --branch test --depth 1 https://github.com/rivey404/bedrock-access-gateway $REPO_DIR
 fi
 
 # Apply patches
